@@ -1,0 +1,83 @@
+{
+    "schema":"https://",
+    "host": "jfcopete.herokuapp.com",
+    "headers":[
+        {
+            "name":"",
+            "value":""
+        }
+    ],
+    "cookies":[
+        {
+        "name":"",
+        "value":""
+        }
+    ],
+    "paths": [
+        {
+            "endpoint": "/user/{*}",
+            "method": "GET",
+            "query_params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "url_params":[
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "endpoint": "/rest/user/login",
+            "method": "POST",
+            "Content-Type":"aplication/json",
+            "body_params": [
+                {
+                    "name": "email",
+                    "type": "string"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "endpoint": "/user",
+            "method": "PUT",
+            "Content-Type":"aplication/json",
+            "query_params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "body_params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "endpoint": "/user",
+            "method": "DELETE",
+            "Content-Type":"aplication/json",
+            "query_params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "body_params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

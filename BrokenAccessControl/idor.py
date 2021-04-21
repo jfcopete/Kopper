@@ -30,4 +30,3 @@ def idor_main(host,path,method,parameters):
                 print(str(response_request))
                 print(str(request.status_code))
 
-
