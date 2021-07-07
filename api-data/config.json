@@ -3,14 +3,14 @@
     "host": "jfcopete.herokuapp.com",
     "headers":[
         {
-            "name":"",
-            "value":""
+            "name":"Authorization",
+            "value":"Bearer UTYR)I(/&%$R)O(/&/Y%T$RKMUJNYHBTGVFDEUJHTGVFRD"
         }
     ],
     "cookies":[
         {
-        "name":"",
-        "value":""
+        "name":"phpsessiopnid",
+        "value":"Bearer UTYR)I(/&%$R)O(/&/Y%T$RKMUJNYHBTGVFDEUJHTGVFRD"
         }
     ],
     "paths": [

@@ -29,6 +29,7 @@ def xss_main(schema,host,headers,cookies,paths):
                     print(r.text)
                     if(line in res):
                         print(f"[-] Possible XSS found on {url_request}.")
+                        create_report_json_main(schema, host, headers, cookies, path, res, "XSS vulnerability")
                         breaked=True
                         break
                 if(breaked):
