@@ -1,0 +1,14 @@
+POST /rest/user/login HTTP/1.1
+Host: jfcopete.herokuapp.com
+Content-Length: 39
+Accept: application/json, text/plain, /
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+Content-Type: application/json
+Origin: http://jfcopete.herokuapp.com/
+Referer: http://jfcopete.herokuapp.com/
+Accept-Encoding: gzip, deflate
+Accept-Language: es-419,es;q=0.9
+Cookie: io=a_OhnD8Yj79XXOWwAAAC; language=en; welcomebanner_status=dismiss
+Connection: close
+
+{"email":"awa@awa.com","password":"ka"}

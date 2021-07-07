@@ -2,6 +2,7 @@ import json
 from BrokenAccessControl.idor import idor_main
 from Injection.xss import xss_main
 from Injection.sqli import sqli_main
+from Injection.template_injection import template_injection_main
 data = {}
 with open ('./api-data/api-docs.json','r') as f:
     data = json.load(f)
@@ -47,7 +48,12 @@ cookies=data['cookies']
 #Get the paths information
 paths=data['paths']
 
+#Calling Sqli Module
 sqli_main(schema,host,headers,cookies,paths)
 
+#Calling XSS Module
+xss_main(schema, host, headers, cookies, paths)
 
+#Calling Template Injection Module
+template_injection_main(schema, host, headers, cookies, paths)
 
