@@ -56,5 +56,3 @@ xss_main(schema, host, headers, cookies, paths)
 
 #Calling Template Injection Module
 template_injection_main(schema, host, headers, cookies, paths)
-
-create_report_main()

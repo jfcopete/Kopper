@@ -1,5 +1,5 @@
 import requests
-from util.create_report_json import create_report_json_main
+from util.create_report import create_report_main
 
 get="GET"
 post="POST"
@@ -27,7 +27,7 @@ def sqli_main(schema,host,headers,cookies,paths):
                     res=r.text
                     if("SQL" in res):
                         print(f"[+] Detected SQLi vulnerability found on {url_request}.")
-                        create_report_json_main(schema, host, headers, cookies, path, res, "SQLi vulnerability")
+                        create_report_main(schema, host, headers, cookies, path, res, "SQLi_vulnerabilities")
                         breaked=True
                         break
                 if(breaked):
