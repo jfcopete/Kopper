@@ -3,6 +3,10 @@ from BrokenAccessControl.idor import idor_main
 from Injection.xss import xss_main
 from Injection.sqli import sqli_main
 from Injection.template_injection import template_injection_main
+import time
+
+
+start_time = time.time()
 
 data = {}
 paths_get=[]
@@ -27,13 +31,15 @@ cookies=data['cookies']
 paths=data['paths']
 
 #Calling Sqli Module
-#sqli_main(schema,host,headers,cookies,paths)
+sqli_main(schema,host,headers,cookies,paths)
 
 #Calling XSS Module
-#xss_main(schema, host, headers, cookies, paths)
+xss_main(schema, host, headers, cookies, paths)
 
 #Calling Template Injection Module
 #template_injection_main(schema, host, headers, cookies, paths)
 
 #Calling Idor Module
-idor_main(schema, host, headers, cookies, paths)
+#idor_main(schema, host, headers, cookies, paths)
+
+print("--- %s seconds ---" % (time.time() - start_time))

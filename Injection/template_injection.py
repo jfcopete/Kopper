@@ -1,5 +1,6 @@
 import requests
 from util.create_report import create_report_main
+from util.get_headers import get_headers_global
 
 get="GET"
 post="POST"
@@ -52,6 +53,7 @@ def template_injection_main(schema,host,headers,cookies,paths):
                     print(r.text)
                     if(line not in res):
                         print(f"[-] Possible TemplateInjection found on {url_request}.")
+                        create_report_main(schema, host, headers, cookies, path, res, "Template Injection vulnerability")
                         breaked=True
                         break
                 if(breaked):

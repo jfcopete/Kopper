@@ -1,5 +1,6 @@
 import requests
 from util.create_report import create_report_main
+from util.get_headers import get_headers_global
 
 get="GET"
 post="POST"
