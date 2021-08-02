@@ -15,7 +15,7 @@
     ],
     "paths": [
         {
-            "endpoint": "/user/{*}",
+            "endpoint": "/rest/products/search?q={*}",
             "method": "GET",
             "query_params": [
                 {

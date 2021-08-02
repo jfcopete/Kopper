@@ -53,6 +53,23 @@ def sqli_main(schema,host,headers,cookies,paths):
                         break
                 if(breaked):
                     break
+        elif(method==get):
+            url_request=url+enpoint
+            print(url_request)
+            print(path)
+            str(url_request)
+            breaked=False
+            for line in sqli_lines_injection:
+                print(line)
+                print(url_request)
+                r=requests.get(str(url_request).replace("{*}", f"{line}"))
+                print(str(url_request).replace("{*}", f"{line}"))
+                res=r.text
+                if("SQL" in res):
+                    print(f"[+] Detected SQLi vulnerability found on {url_request}.")
+                    create_report_main(schema, host, headers, cookies, path, res, "SQLi_vulnerabilities")
+                    breaked=True
+                    break
 
 
                 
