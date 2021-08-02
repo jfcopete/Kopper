@@ -4,7 +4,7 @@
     "headers":[
         {
             "name":"Authorization",
-            "value":"Bearer UTYR)I(/&%$R)O(/&/Y%T$RKMUJNYHBTGVFDEUJHTGVFRD"
+            "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MTgsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJob2xhQGhvbGEuY29tIiwicGFzc3dvcmQiOiIxNDlmMDAwMzY2MTdmMmMxMGM5NDU3YWYxMDU0MGJmMSIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiIwLjAuMC4wIiwicHJvZmlsZUltYWdlIjoiL2Fzc2V0cy9wdWJsaWMvaW1hZ2VzL3VwbG9hZHMvZGVmYXVsdC5zdmciLCJ0b3RwU2VjcmV0IjoiIiwiaXNBY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMjEtMDgtMDIgMTY6MjE6MTYuMjYzICswMDowMCIsInVwZGF0ZWRBdCI6IjIwMjEtMDgtMDIgMTY6MjE6MTYuMjYzICswMDowMCIsImRlbGV0ZWRBdCI6bnVsbH0sImlhdCI6MTYyNzkyMTI4OCwiZXhwIjoxNjI3OTM5Mjg4fQ.bmRotmJPFMUGR9cUolq-U_E75pn2AvOa0Qq8YLQEWkFLZQPrtSS11gypSaFMVKJAcBZ1UWtXUo2xCLtlJwn34CjkCC6QJFMPiAajiGFWV4Eku-fDS3CgdiEydk9qPYsb8CaJ7AjAQyfu-H6SyXD7-9mGB8jo57LM2Beo0wYe44I"
         }
     ],
     "cookies":[
@@ -31,6 +31,43 @@
             ]
         },
         {
+            "endpoint": "/rest/basket/{*}",
+            "method": "GET",
+            "query_params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "url_params":[
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "endpoint": "/rest/products/{*}/reviews",
+            "method": "PUT",
+            "Content-Type":"aplication/json",
+            "query_params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "body_params": [
+                {
+                    "name": "message",
+                    "type": "string"
+                },
+                {
+                    "name": "author",
+                    "type": "string"
+                }
+            ]
+        },
+        {
             "endpoint": "/rest/user/login",
             "method": "POST",
             "Content-Type":"aplication/json",
@@ -45,23 +82,7 @@
                 }
             ]
         },
-        {
-            "endpoint": "/user",
-            "method": "PUT",
-            "Content-Type":"aplication/json",
-            "query_params": [
-                {
-                    "name": "name",
-                    "type": "string"
-                }
-            ],
-            "body_params": [
-                {
-                    "name": "name",
-                    "type": "string"
-                }
-            ]
-        },
+        
         {
             "endpoint": "/user",
             "method": "DELETE",

@@ -27,10 +27,13 @@ cookies=data['cookies']
 paths=data['paths']
 
 #Calling Sqli Module
-sqli_main(schema,host,headers,cookies,paths)
+#sqli_main(schema,host,headers,cookies,paths)
 
 #Calling XSS Module
-xss_main(schema, host, headers, cookies, paths)
+#xss_main(schema, host, headers, cookies, paths)
 
 #Calling Template Injection Module
-template_injection_main(schema, host, headers, cookies, paths)
+#template_injection_main(schema, host, headers, cookies, paths)
+
+#Calling Idor Module
+idor_main(schema, host, headers, cookies, paths)

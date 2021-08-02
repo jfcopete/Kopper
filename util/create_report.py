@@ -4,7 +4,7 @@ import markdown
 import time
 
 def create_report_main(schema,host,headers,cookies,path,res,vuln) :  
-    print(str(vuln)+" "+str(path))  
+    #print(str(vuln)+" "+str(path))  
     vulnerability = "# Vulnerability "+vuln +" in "+path["endpoint"]+" \n"
     summary = "## Summary "+"\n"
     tech_details = "### Technical Details"+"\n"
@@ -21,7 +21,7 @@ def create_report_main(schema,host,headers,cookies,path,res,vuln) :
         cookie_x = cookie_x+" "+x["name"]+" "+x["value"] + " \n"
     cookies_md="#### Cookies: "+ " \n"
     response = "#### Response: "+" \n"
-    impact="### Impact \n"
+    impact=" \n"+"### Impact" +" \n"
 
     md = markdown.Markdown()
     html = md.convert(vulnerability+summary+tech_details+schema_host_path+headers_md+json_md+header_x+close_json_md+cookies_md+json_md+cookie_x+close_json_md+str(response)+str(res).replace("#", "")+impact)
